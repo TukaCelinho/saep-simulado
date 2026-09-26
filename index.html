@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Gerenciamento de Equipamentos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Assistência Técnica - Equipamentos</h1>
+
+    <!-- Form de Cadastro -->
+    <h3>Cadastrar Equipamento</h3>
+    <form id="formEquipamento">
+        <input type="text" id="nome" placeholder="Nome" required>
+        <input type="text" id="tipo" placeholder="Tipo (ex: Notebook)" required>
+        <input type="text" id="marca" placeholder="Marca" required>
+        <input type="text" id="problema" placeholder="Problema Relatado" required>
+        <select id="status">
+            <option value="Em análise">Em análise</option>
+            <option value="Em manutenção">Em manutenção</option>
+            <option value="Finalizado">Finalizado</option>
+        </select>
+        <button type="submit">Cadastrar</button>
+    </form>
+
+    <!-- Lista -->
+    <h3>Lista de Equipamentos</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Tipo</th>
+                <th>Marca</th>
+                <th>Problema</th>
+                <th>Status</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabelaCorpo"></tbody>
+    </table>
+
+    <script src="script.js"></script>
+</body>
+</html>
